@@ -1,6 +1,10 @@
 // src/lambda/graphql.js
 const { ApolloServer, gql } = require("apollo-server-lambda");
 
+try {
+    require('encoding')
+  } catch (error) {}
+
 const typeDefs = gql`
   type Query {
     hello: String
